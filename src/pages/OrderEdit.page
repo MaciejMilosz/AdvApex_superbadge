@@ -41,7 +41,7 @@
                     </apex:pageBlockSectionItem>
                 </apex:pageBlockSection>
                 <apex:pageBlockTable value="{!orderItemList}" var="o" >
-                    <apex:column headerValue="Qty">
+                    <apex:column headerValue="{!$ObjectType.OrderItem.fields.Quantity.Label}">
                         <apex:inputField value="{!o.Quantity}" >
                             <apex:actionSupport event="onchange" action="{!onFieldChange}" reRender="pageMessages, summary" />
                         </apex:inputField>
